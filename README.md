@@ -6,9 +6,9 @@ Step 1: Clone the repository.
 
 Step 2: Create a namespace **namespace-poc** and set context using **kubectl config set-context --current --namespace=namespace-poc**
   
-Step 3: Create service.yaml, aws-auth.yaml, rbacuser-role.yaml, rbacuser-role-binding.yaml and adminclusterrole.yaml using below syntax
+Step 3: Create service.yaml, aws-auth.yaml, rbacuser-role.yaml, rbacuser-role-binding.yaml and adminclusterrole.yaml using below syntax                                              
 
-        **>>  kubectl create -f filename.yaml** in the context set.
+        kubectl create -f filename.yaml
 
 Step 4: Run **kubectl get role** to get all the roles created.
       **NAME     CREATED AT
