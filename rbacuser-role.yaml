@@ -55,6 +55,3 @@ rules:
       - "*"
     verbs:
       - get
-      - describe
-      - list
-      - watch
