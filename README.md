@@ -11,12 +11,16 @@ Step 3: Create service.yaml, aws-auth.yaml, rbacuser-role.yaml, rbacuser-role-bi
         kubectl create -f filename.yaml
 
 Step 4: Run **kubectl get role** to get all the roles created.
+
+Output:
       **NAME     CREATED AT
         dev      2023-08-23T14:31:52Z
         devops   2023-08-23T14:31:52Z
         qa       2023-08-23T14:31:52Z**
         
 Step 5: Run **kubectl get rolebinding** to get the binded roles. 
+
+Output:
       **NAME          ROLE          AGE
         dev_role      Role/dev      171m
         devops_role   Role/devops   171m
@@ -36,10 +40,12 @@ Step 8: Run **kubectl describe role**
             **kubectl describe rolebinding**
             **kubectl describe clusterrolebinding | grep 'adminpoc'**
             **kubectl describe clusterrolebinding | grep 'adminpoc'**
-        To describe and to view all the users associated with the roles.
+        To describe role and to view all the users associated with the roles.
 
 
-Step 9: To check the access of all the user use **kubectl auth can-i verbs resource --as=user**
+Step 9: To check the access of all the user use 
+        
+        **kubectl auth can-i verbs resource --as=user**
 
           **# kubectl auth can-i get pods --as=naveen
           yes
