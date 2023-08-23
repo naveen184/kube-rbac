@@ -36,10 +36,16 @@ Step 7: Run **kubectl get clusterrolebinding | grep 'adminpoc'** to get the bind
 Output:
         **global-access  ClusterRole/adminpoc  176m**
 
-Step 8: Run **kubectl describe role**
+Step 8: Run 
+              
+            **kubectl describe role**
+
             **kubectl describe rolebinding**
+            
             **kubectl describe clusterrolebinding | grep 'adminpoc'**
+            
             **kubectl describe clusterrolebinding | grep 'adminpoc'**
+            
         To describe role and to view all the users associated with the roles.
 
 
@@ -49,10 +55,13 @@ Step 9: To check the access of all the user use
 
           **# kubectl auth can-i get pods --as=naveen
           yes
+          
           # kubectl auth can-i create pods --as=naveen
           no
+          
           # kubectl auth can-i create pods --as=mavathurmahesh
           yes
+          
           # kubectl auth can-i create pods --as=dev_user
           no**
           
