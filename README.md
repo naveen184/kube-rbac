@@ -11,25 +11,25 @@ Step 3: Create service.yaml, aws-auth.yaml, rbacuser-role.yaml, rbacuser-role-bi
         **>>  kubectl create -f filename.yaml** in the context set.
 
 Step 4: Run **kubectl get role** to get all the roles created.
-**
-        NAME     CREATED AT
+      **NAME     CREATED AT
         dev      2023-08-23T14:31:52Z
         devops   2023-08-23T14:31:52Z
         qa       2023-08-23T14:31:52Z**
         
 Step 5: Run **kubectl get rolebinding** to get the binded roles. 
-**
-        NAME          ROLE          AGE
+      **NAME          ROLE          AGE
         dev_role      Role/dev      171m
         devops_role   Role/devops   171m
         qa_role       Role/qa       171m**
         
 Step 6: Run **kubectl get clusterrole | grep 'adminpoc'** to get the admin role created.
 
+Output:
         **adminpoc      2023-08-23T14:33:50Z**
         
 Step 7: Run **kubectl get clusterrolebinding | grep 'adminpoc'** to get the binded role.
 
+Output:
         **global-access  ClusterRole/adminpoc  176m**
 
 Step 8: Run **kubectl describe role**
