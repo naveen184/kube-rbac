@@ -1,0 +1,60 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: namespace-poc
+  name: devops
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - deployments
+      - configmaps
+      - pods
+      - secrets
+      - services
+    verbs:
+      - create
+      - get
+      - delete
+      - list
+      - update
+      - edit
+      - watch
+      - exec
+      - patch
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: namespace-poc
+  name: dev
+rules:
+  - apiGroups:
+      - "*"
+    resources:
+      - "*"
+    verbs:
+      - get
+      - describe
+      - list
+      - watch
+      - exec
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: namespace-poc
+  name: qa
+rules:
+  - apiGroups:
+      - "*"
+    resources:
+      - "*"
+    verbs:
+      - get
+      - describe
+      - list
+      - watch

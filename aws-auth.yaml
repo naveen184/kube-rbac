@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: namespace-poc
+data:
+  mapUsers: |
+    - userarn: arn:aws:iam::729590520513:user/mavathurmahesh
+       username: mavathurmahesh
+    - userarn: arn:aws:iam::729590520513:user/naveen
+       username: naveen
+    - userarn: arn:aws:iam::729590520513:user/neerajadmin
+       username: neerajadmin
+    - userarn: arn:aws:iam::729590520513:user/sasidhar
+       username: sasidhar
+    - userarn: arn:aws:iam::729590520513:user/suhailmir
+       username: suhailmir
+

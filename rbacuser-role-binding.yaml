@@ -1,0 +1,49 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: devops_role
+  namespace: namespace-poc
+subjects:
+  - kind: User
+    name: mavathurmahesh
+    apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: suhailmir
+    apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: sasidhar
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: devops
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: dev_role
+  namespace: namespace-poc
+subjects:
+  - kind: User
+    name: dev_user
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: dev
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: qa_role
+  namespace: namespace-poc
+subjects:
+  - kind: User
+    name: naveen
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: qa
+  apiGroup: rbac.authorization.k8s.io

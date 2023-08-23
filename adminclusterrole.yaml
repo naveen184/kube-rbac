@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: admin
+  namespace: poc-project
+rules:
+- apiGroups: [""]
+  resources: ["deployments","configmaps","pods","secrets","services","nodes","clusterrole","clusterrolebinding","namespace"]
+  verbs: ["create","get","delete","list","update","edit","watch","exec","patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: global-access
+subjects:
+- kind: Group
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+
