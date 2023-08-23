@@ -7,25 +7,30 @@ Step 1: Clone the repository.
 Step 2: Create a namespace **namespace-poc** and set context using **kubectl config set-context --current --namespace=namespace-poc**
   
 Step 3: Create service.yaml, aws-auth.yaml, rbacuser-role.yaml, rbacuser-role-binding.yaml and adminclusterrole.yaml using below syntax
-        >>  kubectl create -f filename.yaml in the context set.
+
+        **>>  kubectl create -f filename.yaml** in the context set.
 
 Step 4: Run **kubectl get role** to get all the roles created.
+**
         NAME     CREATED AT
         dev      2023-08-23T14:31:52Z
         devops   2023-08-23T14:31:52Z
-        qa       2023-08-23T14:31:52Z
+        qa       2023-08-23T14:31:52Z**
         
 Step 5: Run **kubectl get rolebinding** to get the binded roles. 
+**
         NAME          ROLE          AGE
         dev_role      Role/dev      171m
         devops_role   Role/devops   171m
-        qa_role       Role/qa       171m
+        qa_role       Role/qa       171m**
         
 Step 6: Run **kubectl get clusterrole | grep 'adminpoc'** to get the admin role created.
-        adminpoc      2023-08-23T14:33:50Z
+
+        **adminpoc      2023-08-23T14:33:50Z**
         
 Step 7: Run **kubectl get clusterrolebinding | grep 'adminpoc'** to get the binded role.
-        global-access  ClusterRole/adminpoc  176m
+
+        **global-access  ClusterRole/adminpoc  176m**
 
 Step 8: Run **kubectl describe role**
             **kubectl describe rolebinding**
