@@ -1,0 +1,7 @@
+mapUsers: |
+    - userarn: arn:aws:iam::729590520513:user/developer
+      username: developer
+    - userarn: arn:aws:iam::729590520513:user/eks-admin
+      groups:
+      - system:masters
+      username: eks-admin
