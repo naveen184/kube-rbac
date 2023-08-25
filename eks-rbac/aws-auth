@@ -1,3 +1,5 @@
+Add these in your aws-auth config file
+
 mapUsers: |
     - userarn: arn:aws:iam::729590520513:user/developer
       username: developer
