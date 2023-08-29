@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   namespace: default
-  name: developer
+  name: devloper
 rules:
   - apiGroups:
       - ""
@@ -24,13 +24,13 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: developer
+  name: devloper
   namespace: default
 subjects:
   - kind: User
-    name: developer
+    name: devloper
     apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: developer
+  name: devloper
   apiGroup: rbac.authorization.k8s.io
