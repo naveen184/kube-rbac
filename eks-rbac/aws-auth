@@ -1,9 +1,9 @@
 Add these in your aws-auth config file
 
 mapUsers: |
-    - userarn: arn:aws:iam::729590520513:user/developer
-      username: developer
-    - userarn: arn:aws:iam::729590520513:user/eks-admin
+    - userarn: arn:aws:iam::779372627864:user/devloper
+      username: devloper
+    - userarn: arn:aws:iam::779372627864:user/admin
       groups:
       - system:masters
-      username: eks-admin
+      username: admin
